@@ -31,7 +31,6 @@ document.getElementById("donation-btn-three").addEventListener("click", () => {
   //
   //
   alert(`Successfully donated ${inputDonationAmount} Taka for Students.`);
-
   //
   //
   const historyItem = document.createElement("div");
