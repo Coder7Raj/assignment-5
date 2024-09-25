@@ -35,7 +35,7 @@ goToHome.addEventListener("click", () => {
 
 //
 //
-// donating
+// donating for Noakhali
 document.getElementById("donation-btn").addEventListener("click", () => {
   const mainBalance = document.getElementById("main-balance");
   const noakhaliDonations = document.getElementById("donations-of-noakhali");
@@ -43,6 +43,14 @@ document.getElementById("donation-btn").addEventListener("click", () => {
     document.getElementById("input-donation-amount").value
   );
 
+  if (
+    isNaN(inputDonationAmount) ||
+    inputDonationAmount <= 0 ||
+    typeof inputDonationAmount === "string"
+  ) {
+    alert("Please enter a valid donation amount!");
+    return;
+  }
   //
   let mainAccountBalance = parseFloat(mainBalance.innerText) || 0;
   let currentDonateAmount = parseFloat(noakhaliDonations.innerText) || 0;
@@ -57,7 +65,9 @@ document.getElementById("donation-btn").addEventListener("click", () => {
 
   mainBalance.innerText = `${leftMoneys.toFixed(2)} BDT`;
   noakhaliDonations.innerText = `${addedMoneys.toFixed(2)} BDT`;
-
+  //
+  //
+  alert(`Successfully donated ${inputDonationAmount} Taka for Noakhali.`);
   //
   //
   const historyItem = document.createElement("div");
