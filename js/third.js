@@ -1,3 +1,4 @@
+// ............ donation for student in quota movement.........
 document.getElementById("donation-btn-three").addEventListener("click", () => {
   const mainBalance = document.getElementById("main-balance");
   const noakhaliDonations = document.getElementById("donation-for-students");

@@ -35,7 +35,7 @@ goToHome.addEventListener("click", () => {
 
 //
 //
-// donating for Noakhali
+// ..........donation for Noakhali...........
 document.getElementById("donation-btn").addEventListener("click", () => {
   const mainBalance = document.getElementById("main-balance");
   const noakhaliDonations = document.getElementById("donations-of-noakhali");
